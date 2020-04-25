@@ -121,7 +121,7 @@ CNS: Car not stopped        &                                                \\ 
 \newpage
 \section{Test Generation}
 \subsection{Transition Tour - Start, Pull Over, Start}
-Scenario: Visibility is low.
+Scenario: Visibility is low.\\
 
 Sequences:
 \begin{itemize}
@@ -130,7 +130,7 @@ Sequences:
 \end{itemize}
 
 \subsection{Transition Tour - Start, Decelerate, Start}
-Scenario: Driver is speeding.
+Scenario: Driver is speeding.\\
 
 Sequences:
 \begin{itemize}
@@ -138,5 +138,21 @@ Sequences:
 	\item{$<$DEC, !AS :—, S$>$}
 \end{itemize}
 
+\subsection{Transition Tour - Start, Steer Left, Start}
+Scenario: Car to right of driver is too close.\\
 
+Sequences:
+\begin{itemize}
+	\item{$<$S, RC : SLL, SL$>$}
+	\item{$<$SL, !RC :—, S$>$}
+\end{itemize}
+
+\subsection{Transition Tour - Start, Steer Right, Start}
+Scenario: Driver is steering too far left.\\
+
+Sequences:
+\begin{itemize}
+	\item{$<$S,  STL : SRL, SR$>$}
+	\item{$<$SR, !STL :—, S$>$}
+\end{itemize}
 \end{document}
